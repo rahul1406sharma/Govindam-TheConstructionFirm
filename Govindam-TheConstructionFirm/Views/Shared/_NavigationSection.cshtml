@@ -1,0 +1,36 @@
+﻿<style>
+    .tabActive {
+        background-color: white;
+        border-radius: 13px;
+    }
+
+    .NavigationTab {
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+        .NavigationTab:hover {
+            background-color: gray;
+            border-radius: 13px;
+        }
+
+    .govindamDisplay {
+        margin-top: -21px;
+        background-color: mediumpurple;
+    }
+</style>
+
+<div class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-collapse collapse" style="float: right">
+            <ul class="nav navbar-nav" id="NavigationTabSection">
+                <li class='NavigationTab @(ViewBag.TabHighlight =="HOME" ? "tabActive" :"")'>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li class='NavigationTab @(ViewBag.TabHighlight =="ABOUTUS" ? "tabActive" :"")'>@Html.ActionLink("About Us", "AboutUs", "Home")</li>
+                <li class='NavigationTab @(ViewBag.TabHighlight =="PROJECTS" ? "tabActive" :"")'>@Html.ActionLink("Projects", "Projects", "Home")</li>
+                <li class='NavigationTab @(ViewBag.TabHighlight =="ADDRESS" ? "tabActive" :"")'>@Html.ActionLink("Address", "Address", "Home")</li>
+                <li class='NavigationTab @(ViewBag.TabHighlight =="CAREERS" ? "tabActive" :"")'>@Html.ActionLink("Careers", "Careers", "Home")</li>
+                <li class='NavigationTab @(ViewBag.TabHighlight =="LOGIN" ? "tabActive" :"")'>@Html.ActionLink("Login", "Login", "Home")</li>
+            </ul>
+        </div>
+    </div>
+</div>

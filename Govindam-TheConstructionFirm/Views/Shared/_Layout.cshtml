@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="http://example.com/favicon.png" />
+    <title>Govindam</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+
+
+
+    <div>
+        @{Html.RenderPartial("~/Views/Shared/_PageLogoAndCarousel.cshtml"); }
+    </div>
+    <div>
+        @{Html.RenderPartial("~/Views/Shared/_NavigationSection.cshtml"); }
+    </div>
+
+
+
+    <div class="">
+
+        @RenderBody()
+
+        @{
+            Html.RenderPartial("~/Views/Shared/_Footer.cshtml");
+        }
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+
+</html>
